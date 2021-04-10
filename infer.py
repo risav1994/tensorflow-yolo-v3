@@ -71,7 +71,6 @@ coreNet = core.read_network(
 net = core.load_network(coreNet, "CPU", num_requests=2)
 inpBlobName = next(iter(coreNet.inputs))
 outBlobName = next(iter(coreNet.outputs))
-print(coreNet.inputs[inpBlobName].shape)
 count = 0
 for idx, img in enumerate(xTest):
     inputs = {inpBlobName: img.astype(np.float32)}
