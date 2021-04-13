@@ -69,7 +69,7 @@ coreNet = core.read_network(
     weights="saved_model.bin"
 )
 net = core.load_network(coreNet, "CPU", num_requests=2)
-inpBlobName = next(iter(coreNet.inputs))
+inpBlobName = next(iter(coreNet.input_info))
 outBlobName = next(iter(coreNet.outputs))
 count = 0
 for idx, img in enumerate(xTest):
